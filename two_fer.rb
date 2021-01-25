@@ -9,3 +9,11 @@
 # If no name is given, the result should be "One for you, one for me."
 
 p "Enter a name:"
+
+name = gets.chomp.downcase
+
+if name == "you" || name == ""
+  p "One for you, one for me."
+else
+  p "One for " + name.capitalize + ", one for me."
+end

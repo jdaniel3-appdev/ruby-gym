@@ -33,3 +33,37 @@ p some_random_input
 
 # Write your code below
 
+weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+if some_random_input.class.to_s == "String"
+  p some_random_input.downcase
+elsif
+  some_random_input.class.to_s == "Time"
+  p weekdays[some_random_input.wday].downcase
+elsif
+  some_random_input.class.to_s == "Integer"
+  if some_random_input.even?
+    p some_random_input.to_s + " is even"
+  elsif some_random_input.odd?
+    p some_random_input.to_s + " is odd"
+  else
+    p "error"
+  end
+elsif
+  some_random_input.class.to_s == "Symbol"
+  p some_random_input.downcase
+elsif
+  some_random_input.class.to_s == "NilClass"
+  p "no object provided"
+elsif
+  some_random_input.class.to_s == "TrueClass"
+  p "you may pass"
+elsif
+  some_random_input.class.to_s == "FalseClass"
+  p "you may not pass"
+elsif
+  some_random_input.class.to_s == "Hash"
+  p some_random_input.keys
+else
+  p "error"
+end

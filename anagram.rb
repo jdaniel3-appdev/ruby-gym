@@ -6,4 +6,28 @@
 
 p "Enter two words separated by a comma"
 
-user_words = gets.chomp
+user_words = gets.chomp.split(",")
+
+u_w_1_sorted = user_words[0].split("").sort
+u_w_1_sorted_nospace = Array.new
+u_w_2_sorted = user_words[1].split("").sort
+u_w_2_sorted_nospace = Array.new
+
+u_w_1_sorted.each do |character|
+  if character != " "
+    u_w_1_sorted_nospace.push(character)
+  else
+    u_w_1_sorted_nospace = u_w_1_sorted_nospace
+  end
+end
+
+u_w_2_sorted.each do |character|
+  if character != " "
+    u_w_2_sorted_nospace.push(character)
+  else
+    u_w_2_sorted_nospace = u_w_2_sorted_nospace
+  end
+end
+
+p u_w_1_sorted_nospace == u_w_2_sorted_nospace
+

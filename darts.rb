@@ -29,3 +29,28 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+
+coordinates = gets.chomp.split(",")
+
+counter = 0
+
+while counter <= coordinates.length - 1
+  coordinates[counter] = coordinates[counter].to_f
+  counter = counter + 1
+end
+
+x = coordinates[0]
+y = coordinates[1]
+score = Float
+
+if (x ** 2) + (y ** 2) <= (1 ** 2)
+  score = 10
+elsif (x ** 2) + (y ** 2) <= (5 ** 2)
+  score = 5
+elsif (x ** 2) + (y ** 2) <= (10 ** 2)
+  score = 1
+else 
+  score = 0
+end
+
+p score.to_s + " points"

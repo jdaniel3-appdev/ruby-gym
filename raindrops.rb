@@ -37,3 +37,33 @@
 
 
 p "Enter an integer"
+
+user_input = gets.chomp.to_i
+
+output_string = String.new
+
+if user_input % 3 == 0 || user_input % 5 == 0 || user_input % 7 == 0
+
+  if user_input % 3 == 0
+    output_string = output_string + "Pling"
+  else
+    output_string = output_string
+  end
+
+  if user_input % 5 == 0
+    output_string = output_string + "Plang"
+  else
+    output_string = output_string
+  end
+
+  if user_input % 7 == 0
+    output_string = output_string + "Plong"
+  else
+    output_string = output_string
+  end
+
+else
+  output_string = user_input.to_s
+end
+
+p output_string

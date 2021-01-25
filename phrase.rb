@@ -25,3 +25,28 @@
 
 
 
+
+class Phrase
+  attr_accessor :body
+
+  def abbreviate
+    input_phrase = self.body.gsub("-"," ")
+    input_phrase = input_phrase.split(" ")
+    input_phrase_wordcount = input_phrase.length
+    acronym = String.new
+    counter = 0
+
+    input_phrase_wordcount.times do
+      acronym = acronym.concat(input_phrase[counter].split("")[0].upcase)
+      counter = counter + 1
+    end
+  
+    return acronym
+  end
+end
+
+# p "Enter a phrase"
+# user_phrase = Phrase.new
+# user_phrase.body = gets.chomp
+
+# p user_phrase.abbreviate
